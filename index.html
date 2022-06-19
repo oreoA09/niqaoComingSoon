@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niqao Tech</title>
+
+    <style>
+        /*-------------
+ 	General
+-------------*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font: normal 16px sans-serif;
+	color: #000;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    padding: 20px 150px;
+    background: url(/images/pexels-karolina-grabowska-5632402.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    /* justify-content: center; */
+	padding: 0px 100px;
+}
+
+span{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 900;
+    margin: 5px 0 30px 0;
+    text-shadow: 1px 1px 3px #690068;
+}
+
+header p{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px white;
+}
+
+#demo {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+  text-shadow: 1px 1px 3px white;
+  padding: 10px 20px;
+  margin: 20px 0;
+  color: #690068;
+  border: 3px solid #690068;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px white;
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+    background-color: #690068;
+    color: #ffffff;
+}
+
+@media (max-width: 1000px){
+
+	header{
+		padding: 50px 100px;
+	}
+
+    section img{
+        width: 200px;
+    }
+
+}
+
+@media (max-width: 600px){
+
+	header{
+		padding: 30px 80px;
+	}
+    section img{
+        width: 200px;
+    }
+
+}
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+		<div>
+			<span>No 19, Banana Str, East Legon, Accra.</span>
+			<span>| +233(0)501371353 |</span>
+			<span>support@niqao.com</span>
+		</div>
+	
+
+	<section>
+        <img src="images/Niqao_purple2.png" alt="Niqao Logo" width="300px">
+		<h1>We'll be back soon</h1>
+		<p>The Niqao team is currently working on a new super awesome website with added service offering for merchants,employees and their employers.</p>
+
+        <h4><u>RE-LAUNCHING IN</u></h4>
+		<p id="demo"></p>
+	</section>
+
+</header>
+
+    <footer>
+		<p><small>&copy;Copyright 2022 Niqao Technologies Ltd. All rights reserved.</small></p>
+	</footer>
+    
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jul 4, 2022 10:37:25").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+</body>
+</html>
